@@ -1,12 +1,14 @@
 Source: pgbouncer
 Section: database
 Priority: extra
-Maintainer: Marko Kreen <markokr@gmail.com>
+Maintainer: Marko Kreen <markokr@gmail.com>,
+ Travis Mehlinger <travis.mehlinger@dewsly.com>
 Standards-Version: 3.6.2
 Build-Depends: debhelper (>= 9), make (>= 3.81), python-docutils,
- libevent-dev (>= 2.0), libssl-dev (>= 1.0.1), libc-ares-dev (>= 1.7.0)
+ libevent-dev (>= 2.0), libssl-dev (>= 1.0.1), libc-ares-dev (>= 1.7.0),
+ libpam-dev (>= 1.1.8)
 
-Package: pgbouncer
+Package: pgbouncer-pam
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, adduser
 Description: Lightweight connection pooler for PostgreSQL

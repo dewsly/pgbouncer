@@ -8,6 +8,9 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 %:
 	dh $@
 
+override_dh_auto_configure:
+	./configure --with-pam --prefix /usr
+
 override_dh_auto_clean:
 	if test -f config.mak; then $(MAKE) clean; fi
 
